@@ -1,7 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-if (process.env.NODE_ENV === "development") {
-  // Or, `process.env.NODE_ENV !== 'production'`
-  // Only runs in development and will be stripped from production build.
-  console.log("hello world");
-}
+ReactDOM.render(<App />, document.getElementById("root"));
