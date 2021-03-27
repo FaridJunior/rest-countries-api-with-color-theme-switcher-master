@@ -1,5 +1,42 @@
+.main-header{
+  --box-shadow:
+  0 6px 3.6px rgba(0, 0, 0, 0.026),
+  0 12px 10px rgba(0, 0, 0, 0.042),
+  0 20.7px 24.1px rgba(0, 0, 0, 0.056),
+
+}
+
 .main-header {
+  position: sticky;
+  background: var(--elements-color);
   color: var(--text);
-  display: flex;
-  justify-content: space-between;
+  padding: 1rem 0;
+  box-shadow: var(--box-shadow);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+
+  // start theme toggler
+  .theme-toggler {
+    display: none;
+  }
+  .theme-toggler__label {
+    cursor: pointer;
+  }
+  .light-theme-option {
+    display: none;
+  }
+  .theme-toggler:checked ~ .dark-theme-option {
+    display: none;
+  }
+  .theme-toggler:checked ~ .light-theme-option {
+    display: inline;
+  }
+  // end theme toggler
 }

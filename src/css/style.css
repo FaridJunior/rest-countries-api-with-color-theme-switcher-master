@@ -34,6 +34,7 @@ body {
   font-family: "Nunito Sans", sans-serif; }
 
 .container {
+  margin: auto;
   width: 90%;
   max-width: 1440px; }
 
@@ -41,6 +42,85 @@ body {
   background: var(--BG); }
 
 .main-header {
+  --box-shadow:
+  0 6px 3.6px rgba(0, 0, 0, 0.026),
+  0 12px 10px rgba(0, 0, 0, 0.042),
+  0 20.7px 24.1px rgba(0, 0, 0, 0.056),
+
+; }
+
+.main-header {
+  position: sticky;
+  background: var(--elements-color);
   color: var(--text);
+  padding: 1rem 0;
+  box-shadow: var(--box-shadow); }
+  .main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .main-header .heading {
+    font-size: 1rem; }
+  .main-header .theme-toggler {
+    display: none; }
+  .main-header .theme-toggler__label {
+    cursor: pointer; }
+  .main-header .light-theme-option {
+    display: none; }
+  .main-header .theme-toggler:checked ~ .dark-theme-option {
+    display: none; }
+  .main-header .theme-toggler:checked ~ .light-theme-option {
+    display: inline; }
+
+.main {
+  padding: 1rem 0px;
+  color: var(--text); }
+
+.main__header {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 2rem 0; }
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem; }
+
+.card {
+  --box-shadow:
+  0 8.3px 5.3px rgba(0, 0, 0, 0.018),
+  0 15.6px 17.9px rgba(0, 0, 0, 0.028),
+  0 42px 80px rgba(0, 0, 0, 0.05)
+;
+  --border-radius: 4px; }
+
+.card {
+  background: var(--elements-color); }
+
+.card {
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 200ms ease-in-out; }
+
+.card:hover {
+  transform: scale(1.01); }
+
+.card__img {
+  border-radius: var(--border-radius) var(--border-radius) 0 0; }
+  .card__img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.card__body {
+  padding: 1.2rem; }
+
+.card__title {
+  font-size: 1rem;
+  padding: 0.4rem 0; }
+
+.card__details {
+  list-style: none;
+  font-size: 0.9rem;
+  padding: .4rem 0; }

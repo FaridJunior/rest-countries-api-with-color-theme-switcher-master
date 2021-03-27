@@ -1,0 +1,47 @@
+.card {
+  --box-shadow:
+  0 8.3px 5.3px rgba(0, 0, 0, 0.018),
+  0 15.6px 17.9px rgba(0, 0, 0, 0.028),
+  0 42px 80px rgba(0, 0, 0, 0.05)
+;
+
+  --border-radius: 4px;
+}
+
+.card {
+  background: var(--elements-color);
+}
+
+.card {
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 200ms ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card__img {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.card__body {
+  padding: 1.2rem;
+}
+
+.card__title {
+  font-size: 1rem;
+  padding: 0.4rem 0;
+}
+
+.card__details {
+  list-style: none;
+  font-size: 0.9rem;
+  padding: .4rem 0;
+}
