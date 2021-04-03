@@ -1,18 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 
-function RegionFilter() {
+function RegionFilter({ region, setRegion }) {
   return (
     <label htmlFor="region">
       "pla"
       <select
         name=""
         id="region"
-        onChange={(e) => setState(e.target.value)}
-        onBlur={(e) => setState(e.target.value)}
+        value={region}
+        onChange={(e) => setRegion(e.target.value)}
+        onBlur={(e) => setRegion(e.target.value)}
       >
-        <option value="all">all</option>
-        <option key="pla" value="pla">
-          "pla"
+        <option value="All">all</option>
+        <option value="Africa" key="africa">
+          Africa
+        </option>
+        <option value="Americas" key="america">
+          America
+        </option>
+        <option value="Asia" key="asia">
+          Asia
+        </option>
+        <option value="Europe" key="europe">
+          Europe
+        </option>
+        <option value="Oceania" key="Oceania">
+          Oceania
         </option>
       </select>
     </label>
