@@ -1,0 +1,31 @@
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--elements-color);
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 14px 8px rgba(0, 0, 0, 0.025);
+}
+
+.search-icon {
+  padding-right: 1rem;
+  display: block;
+
+  svg {
+    color: var(--text);
+    display: block;
+  }
+}
+
+.search-input {
+  background: var(--elements-color);
+  border: 0;
+  color: var(--text);
+  width: calc(min(80vw, 300px));
+  font-size: 1rem;
+  padding: 0.1rem;
+}
+
+.search-input:focus {
+  outline: none;
+}

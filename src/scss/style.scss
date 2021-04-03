@@ -23,8 +23,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
+  transition: all 100ms ease-in-out;
 }
 
 body,
@@ -48,9 +49,11 @@ body {
 
 .app {
   background: var(--BG);
+  min-height: 100vh;
 }
 
 @import "header";
 @import "details";
 @import "main";
 @import "card";
+@import "search";

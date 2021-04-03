@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Router } from "@reach/router";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
+import Details from "./Components/Details";
 import { ThemeContext } from "./Context/ThemeContext";
 
 function App() {
@@ -11,7 +13,10 @@ function App() {
     <ThemeContext.Provider value={themeValue}>
       <div className={`app ${theme}-theme`}>
         <Header />
-        <Main />
+        <Router>
+          <Main path="/" />
+          <Details path="/details/:name" />
+        </Router>
       </div>
     </ThemeContext.Provider>
   );

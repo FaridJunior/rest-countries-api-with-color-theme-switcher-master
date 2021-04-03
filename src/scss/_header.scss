@@ -1,13 +1,8 @@
-.main-header{
-  --box-shadow:
-  0 6px 3.6px rgba(0, 0, 0, 0.026),
-  0 12px 10px rgba(0, 0, 0, 0.042),
-  0 20.7px 24.1px rgba(0, 0, 0, 0.056),
-
+.main-header {
+  --box-shadow: 0 6px 6px rgba(0, 0, 0, 0.026);
 }
 
 .main-header {
-  position: sticky;
   background: var(--elements-color);
   color: var(--text);
   padding: 1rem 0;
@@ -20,6 +15,10 @@
 
   .heading {
     font-size: 1rem;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 
   // start theme toggler
