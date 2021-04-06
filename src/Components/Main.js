@@ -23,7 +23,7 @@ function Main() {
       });
   }, []);
   return loading ? (
-    "loading"
+    <span className="loading" id="loading"></span>
   ) : (
     <main className="main">
       <div className="container">

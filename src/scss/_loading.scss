@@ -1,0 +1,22 @@
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 6px solid rgba(29, 161, 242, 0.2);
+  border-top-color: var(--text);
+  animation: loading 1s infinite linear;
+  z-index: 1000;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

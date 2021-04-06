@@ -3,7 +3,6 @@ import React from "react";
 function RegionFilter({ region, setRegion }) {
   return (
     <label htmlFor="region">
-      "pla"
       <select
         name=""
         id="region"

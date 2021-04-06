@@ -25,7 +25,7 @@
 *::after {
   margin: 0;
   box-sizing: border-box;
-  transition: all 100ms ease-in-out;
+  transition: all 50ms ease-in-out;
 }
 
 body,
@@ -57,3 +57,4 @@ body {
 @import "main";
 @import "card";
 @import "search";
+@import "loading";

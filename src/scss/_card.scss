@@ -13,7 +13,7 @@
   cursor: pointer;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  transition: all 200ms ease-in-out;
+  transition: transform 100ms;
 }
 
 .card:hover {
@@ -25,6 +25,7 @@
 }
 .card__img {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+  min-height: 200px;
   height: 200px;
   img {
     width: 100%;
@@ -47,6 +48,6 @@
   font-size: 0.9rem;
   padding: 0.4rem 0;
   span {
-    opacity: 0.6;
+    opacity: 0.8;
   }
 }
