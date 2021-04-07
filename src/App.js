@@ -6,7 +6,7 @@ import Details from "./Components/Details";
 import { ThemeContext } from "./Context/ThemeContext";
 
 function App() {
-  let [theme, setTheme] = useState("dark");
+  let [theme, setTheme] = useState(localStorage.getItem("theme"));
   const themeValue = { theme, setTheme };
 
   return (

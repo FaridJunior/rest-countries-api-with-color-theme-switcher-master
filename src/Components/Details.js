@@ -35,7 +35,6 @@ function Details({ name }) {
       fetch(url)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           setBorderCountries(data);
         })
         .catch(() => {
