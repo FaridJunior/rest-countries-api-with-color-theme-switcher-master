@@ -2,32 +2,46 @@ import React from "react";
 
 function RegionFilter({ region, setRegion }) {
   return (
-    <label htmlFor="region">
-      <select
-        name=""
-        id="region"
-        value={region}
-        onChange={(e) => setRegion(e.target.value)}
-        onBlur={(e) => setRegion(e.target.value)}
-      >
-        <option value="All">all</option>
-        <option value="Africa" key="africa">
+    <div className="dropdown">
+      <button></button>
+      <div className="options" onChange={(e) => setRegion(e.target.value)}>
+        {/* <option value="All">all</option> */}
+
+        <input id="all" type="radio" name="region" value="All" defaultChecked />
+        <label style={{ "--index": 1 }} htmlFor="all">
+          Filter By Region
+        </label>
+
+        <input id="radio-africa" type="radio" name="region" value="Africa" />
+        <label style={{ "--index": 2 }} htmlFor="radio-africa">
           Africa
-        </option>
-        <option value="Americas" key="america">
+        </label>
+
+        <input id="radio-America" type="radio" name="region" value="Americas" />
+        <label style={{ "--index": 3 }} htmlFor="radio-America">
           America
-        </option>
-        <option value="Asia" key="asia">
+        </label>
+
+        <input id="radio-asia" type="radio" name="region" value="Asia" />
+        <label style={{ "--index": 4 }} htmlFor="radio-asia">
           Asia
-        </option>
-        <option value="Europe" key="europe">
+        </label>
+
+        <input id="radio-europe" type="radio" name="region" value="Europe" />
+        <label style={{ "--index": 5 }} htmlFor="radio-europe">
           Europe
-        </option>
-        <option value="Oceania" key="Oceania">
+        </label>
+
+        <input id="radio-oceania" type="radio" name="region" value="Oceania" />
+        <label style={{ "--index": 6 }} htmlFor="radio-oceania">
           Oceania
-        </option>
-      </select>
-    </label>
+        </label>
+      </div>
+
+      <svg viewBox="0 0 24 24">
+        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+      </svg>
+    </div>
   );
 }
 

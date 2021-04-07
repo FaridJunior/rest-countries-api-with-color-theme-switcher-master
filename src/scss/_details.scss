@@ -26,14 +26,15 @@
 
   .back-btn {
     background: var(--elements-color);
+    display: inline-block;
     border: 0;
-    padding: 0.3rem 1.4rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
     border-radius: 2px;
     a {
-      text-decoration: none;
-      color: var(--text);
+      display: block;
+      width: 100%;
+      padding: 0.3rem 1.4rem;
     }
   }
 }

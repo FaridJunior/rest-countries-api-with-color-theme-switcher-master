@@ -20,7 +20,7 @@ function Details({ name }) {
         setError(true);
         setLoading(false);
       });
-  }, []);
+  }, [name]);
 
   useEffect(() => {
     if (!isEmpty(country)) {
@@ -51,9 +51,9 @@ function Details({ name }) {
     <section className="details">
       <div className="container">
         <div className="col">
-          <button className="back-btn">
+          <div className="back-btn">
             <Link to="/"> &larr; back </Link>
-          </button>
+          </div>
           <div className="flag-img">
             <img src={country.flag} alt={country.name} />
           </div>
@@ -108,14 +108,17 @@ function Details({ name }) {
             </div>
             <p className="border-country row">
               <span> Border Countries:</span>
-              <span className="data">
-                {borderCountries &&
-                  borderCountries.map((country) => (
-                    <span className="badge" key={country.name}>
-                      {country.name}
-                    </span>
-                  ))}
-              </span>
+              <div className="data">
+                {borderCountries && borderCountries.length === 0
+                  ? "have No borders with other countries"
+                  : borderCountries.map((country) => (
+                      <Link to={`/details/${country.name}`}>
+                        <span className="badge" key={country.name}>
+                          {country.name}
+                        </span>
+                      </Link>
+                    ))}
+              </div>
             </p>
           </div>
         </div>

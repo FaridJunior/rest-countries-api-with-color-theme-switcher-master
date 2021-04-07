@@ -50,6 +50,7 @@ function filterCounties(countries, searchText, region = "") {
     return matchRegion(country) && matchName(country);
   });
 
+  /* *********************************** */
   function matchRegion(country) {
     if (region === "" || region === "All") {
       return true;

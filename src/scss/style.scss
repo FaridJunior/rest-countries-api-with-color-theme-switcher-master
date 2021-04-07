@@ -52,9 +52,15 @@ body {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
 @import "header";
 @import "details";
 @import "main";
 @import "card";
 @import "search";
 @import "loading";
+@import "select";

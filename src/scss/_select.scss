@@ -1,0 +1,93 @@
+// most code from https://codepen.io/Befeepilf/pen/WNQXvyq
+
+$bg: var(--elements-color);
+$bg-hover: var(--BG);
+$padding: 16px 21px;
+
+.dropdown {
+  position: relative;
+  box-sizing: content-box;
+  width: 210px;
+  height: 1em;
+  padding: $padding;
+  background-color: $bg;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.08);
+  color: var(--text);
+  font-weight: 300;
+
+  &:hover svg {
+    transform: scale(1.1);
+  }
+
+  button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+    &:focus {
+      & ~ svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .options {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  input {
+    display: none;
+
+    &:checked + label {
+      display: block;
+      z-index: 2;
+      // font-weight: 300;
+      transform: none !important;
+    }
+  }
+
+  label {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    padding: $padding;
+    line-height: 1;
+    background-color: $bg;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $bg-hover;
+    }
+  }
+
+  button:focus + .options input:not(:checked) + label,
+  .options label:active,
+  .options label:active ~ label {
+    transform: translateY(calc(var(--index) * 100%));
+  }
+
+  button:focus + .options input:checked + label ~ label,
+  .options input:checked ~ label:active,
+  .options input:checked ~ label:active ~ label {
+    transform: translateY(calc((var(--index) - 1) * 100%));
+  }
+
+  svg {
+    position: absolute;
+    width: 21px;
+    top: 25%;
+    right: 14px;
+    z-index: 2;
+    fill: currentColor;
+  }
+}
