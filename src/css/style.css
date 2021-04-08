@@ -208,8 +208,10 @@ a {
 .card__details {
   list-style: none;
   font-size: 0.9rem;
-  padding: 0.4rem 0; }
+  padding: 0.4rem 0;
+  font-weight: 600; }
   .card__details span {
+    font-weight: 300;
     opacity: 0.8; }
 
 .search-input-wrapper {

@@ -23,6 +23,6 @@ coverage/
 .vscode/
 
 style-guide.md
-README*
+_README*
 design
 design/**/*

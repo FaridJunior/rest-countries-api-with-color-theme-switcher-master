@@ -5,8 +5,6 @@ function RegionFilter({ region, setRegion }) {
     <div className="dropdown">
       <button></button>
       <div className="options" onChange={(e) => setRegion(e.target.value)}>
-        {/* <option value="All">all</option> */}
-
         <input id="all" type="radio" name="region" value="All" defaultChecked />
         <label style={{ "--index": 1 }} htmlFor="all">
           Filter By Region

@@ -10,7 +10,7 @@ function Details({ name }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://restcountries.eu/rest/v2/name/${name}`)
+    fetch(`https://restcountries.eu/rest/v2/name/${name.split("-").join(" ")}`)
       .then((data) => data.json())
       .then((data) => {
         setLoading(false);

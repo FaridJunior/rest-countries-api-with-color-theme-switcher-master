@@ -5,7 +5,7 @@ function Card(props) {
   const { name, flag, region, population, capital } = props.country;
   return (
     <div className="card">
-      <Link to={`details/${name}`} className="card__link">
+      <Link to={`details/${name.split(" ").join("-")}`} className="card__link">
         <div className="card__img">
           <img src={flag} alt={name} loading="lazy" />
         </div>
